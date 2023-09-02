@@ -1,0 +1,126 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+html{height: 100%;}
+
+body{
+    font-size: 1.2rem;
+    min-height: 100%;
+    background-color: #909090;
+}
+
+.contenedor > * {
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* .--- Class   #--- ID */
+
+.header{
+grid-area: header;
+background: #3d75ee;
+align-items: center;
+display: inline-flex;
+}
+#navbar{
+    grid-area: navbar;
+    background: #6c6c6c;
+    background-image: url("https://statist-threaders.000webhostapp.com/img/Media/penguin_logistics.jpg");
+}
+#main{
+    grid-area: main;
+    background: #242424;
+    text-align: center;
+
+
+}
+#sidebar{
+    grid-area: sidebar;
+    background: #484848;
+    background-image: url("https://statist-threaders.000webhostapp.com/img/Media/PenguinBlackBG.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#footer{
+    grid-area: footer;
+    background: #242424;
+
+}
+
+/*-- Grid Template Column --*/
+
+.contenedor{
+    display: grid;
+    gap: 10px;
+    grid-template:
+    "header" 100px
+    "navbar" 50px
+    "main" auto
+    "sidebar" 100px
+    "footer" 100px;
+}
+/*-----------------------*/
+
+
+h1{
+    padding-right: 740px;
+    color: whitesmoke;
+}
+p{
+    text-align: justify;
+
+
+}
+button{
+    background-color: #484848;
+    width: 150px;
+    margin: 5px auto;
+}
+
+.redes{
+    height: 150px;
+    width: 150px;
+}
+/*-----------------------*/
+
+/*-- @media --*/
+
+@media (min-width:600px){
+    p{
+        text-align: justify;
+        width: auto;
+    }
+    .redes{
+        height: auto;
+        width: auto;
+    }
+    .contenedor{
+    grid-template:
+    "header header" 100px
+    "navbar navbar" 50px 
+    "sidebar main" auto
+    "footer footer" 100px / 200px auto;
+    }
+}
+
+/*-- @media 900 --*/
+
+@media (min-width:900px){
+    p{
+        text-align: justify;
+        width: auto;
+    }
+    .contenedor{
+    grid-template:
+    "header header header" 100px
+    "navbar main sidebar" auto 
+    "footer footer footer" 100px / 200px auto;
+    }
+}
+
+
